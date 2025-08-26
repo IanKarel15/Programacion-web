@@ -1,11 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guía de Etiquetas HTML — Demostración Completa</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; margin: 2rem; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .section { padding: 1rem 0; }
+    .box { border: 1px solid #ddd; padding: 1rem; border-radius: 12px; }
+    nav a { margin-right: .75rem; }
+    code { padding: .15rem .35rem; background: #f6f6f6; border-radius: 6px; }
+    pre { background: #0f172a; color: #e5e7eb; padding: 1rem; border-radius: 12px; overflow: auto; }
+    kbd { border: 1px solid #aaa; border-bottom-width: 3px; padding: 0 .35rem; border-radius: 6px; background: #f8f8f8; }
+    .muted { color: #6b7280; }
+  </style>
 </head>
 <body>
-   <p>haoaaola</p>
+  <div class="container" id="top">
+    <!-- Título principal (h1) -->
+    <h1>Desarrollo Web Básico: Guía Rápida de Formato en HTML</h1>
+
+    <!-- Navegación interna con enlaces -->
+    <nav class="section">
+      <strong>Secciones:</strong>
+      <a href="#intro">Introducción</a>
+      <a href="#formato">Formato de texto</a>
+      <a href="#estructura">Estructura adicional</a>
+      <a href="#citas">Citas</a>
+      <a href="#especiales">Elementos especiales</a>
+      <a href="#formula-codigo">Fórmulas y código</a>
+      <a href="#enlaces">Enlaces</a>
+      <a href="#pre">Texto preformateado</a>
+    </nav>
+
+    <hr>
+
+    <!-- Contenido organizado con divs y subtítulos (h2, h3) -->
+    <div id="intro" class="section box">
+      <h2>Introducción</h2>
+      <div>
+        <p>
+          En esta página demostramos diversas <em>etiquetas de HTML</em> para dar forma y significado al contenido. 
+          Verás ejemplos de títulos, <b>negritas</b>, <i>cursivas</i>, <u>subrayados</u>, así como etiquetas semánticas como 
+          <strong>strong</strong> y <em>em</em>.
+        </p>
+        <p class="muted"><small>Tip:</small> Puedes usar <kbd>Ctrl</kbd> + <kbd>F</kbd> para buscar una etiqueta específica.</p>
+      </div>
+    </div>
+
+    <div id="formato" class="section box">
+      <h2>Formato de texto</h2>
+      <div>
+        <h3>Estilos básicos</h3>
+        <p>
+          <b>Negrita (b)</b>, <strong>Negrita semántica (strong)</strong>, 
+          <i>Cursiva (i)</i>, <em>Énfasis semántico (em)</em>, 
+          <u>Subrayado (u)</u>.
+        </p>
+        <p>
+          También podemos combinar estilos: 
+          <strong><em>texto importante y enfatizado</em></strong> o 
+          <u><b>subrayado en negrita</b></u>.
+        </p>
+      </div>
+    </div>
+
+    <div id="estructura" class="section box">
+      <h2>Estructura adicional</h2>
+      <div>
+        <h3>Saltos de línea y reglas horizontales</h3>
+        <p>
+          Un párrafo con un salto de línea aquí<br>
+          y continúa en la siguiente línea. 
+        </p>
+        <p>
+          A continuación una línea horizontal para separar contenidos:
+        </p>
+        <hr>
+        <p class="muted"><small>Las reglas horizontales (<code>&lt;hr&gt;</code>) son útiles para dividir secciones.</small></p>
+      </div>
+    </div>
+
+    <div id="citas" class="section box">
+      <h2>Citas</h2>
+      <div>
+        <h3>Cita corta con <code>&lt;q&gt;</code></h3>
+        <p>
+          Como decía Grace Hopper: <q>No hay que temer a los cambios</q>.
+        </p>
+
+        <h3>Cita larga con <code>&lt;blockquote&gt;</code></h3>
+        <blockquote cite="https://www.w3.org/TR/html52/">
+          El lenguaje HTML proporciona las bases para estructurar documentos web, permitiendo una organización clara del contenido y facilitando la accesibilidad y la semántica.
+        </blockquote>
+      </div>
+    </div>
+
+    <div id="especiales" class="section box">
+      <h2>Elementos especiales</h2>
+      <div>
+        <p>
+          Este texto tiene partes <mark>resaltadas</mark> para llamar la atención.
+        </p>
+        <p>
+          Podemos mostrar correcciones: antes decía <del>HTLM</del> pero ahora está <ins>HTML</ins>.
+        </p>
+        <p class="muted">
+          <small>El texto pequeño se usa para notas, disclaimers o detalles secundarios.</small>
+        </p>
+      </div>
+    </div>
+
+    <div id="formula-codigo" class="section box">
+      <h2>Fórmulas y código</h2>
+      <div>
+        <h3>Subíndices y superíndices</h3>
+        <p>
+          Fórmula química: H<sub>2</sub>O &nbsp;|&nbsp; Relatividad: E = mc<sup>2</sup>
+        </p>
+
+        <h3>Código en línea</h3>
+        <p>
+          Para imprimir en consola en JavaScript usa <code>console.log("Hola")</code>.
+        </p>
+
+        <h3>Bloque de código y combinaciones con <code>&lt;kbd&gt;</code></h3>
+        <pre><code># Comandos de Git (ejemplo)
+# Guardar cambios
+git add .
+# Confirmar
+git commit -m "Actualiza README"
+# Enviar a remoto
+git push origin main
+
+# Atajo útil (guardar archivo): presiona <Ctrl+S>
+</code></pre>
+        <p>Atajo de teclado real: presiona <kbd>Ctrl</kbd> + <kbd>S</kbd> para guardar.</p>
+      </div>
+    </div>
+
+    <div id="enlaces" class="section box">
+      <h2>Enlaces</h2>
+      <div>
+        <p>
+          Enlace externo a la <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener noreferrer">documentación de MDN</a>.
+        </p>
+        <p>
+          Enlace interno para <a href="#top">volver al inicio</a> de esta página.
+        </p>
+      </div>
+    </div>
+
+    <div id="pre" class="section box">
+      <h2>Texto preformateado</h2>
+      <div>
+        <p>El texto dentro de <code>&lt;pre&gt;</code> respeta espacios y saltos de línea:</p>
+        <pre>
+Col 1    Col 2    Col 3
+-----    -----    -----
+Dato A   123      ✓
+Dato B   7        ✓
+Dato C   42       ✗
+        </pre>
+      </div>
+    </div>
+
+    <hr>
+    <p class="muted"><small>Fin del documento de demostración. <a href="#top">Subir</a></small></p>
+  </div>
 </body>
 </html>

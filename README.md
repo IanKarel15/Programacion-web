@@ -31,7 +31,7 @@
 
 2. Parcial 2
 
-    * Actividad 1
+    * 🔗 [Ver código del index.html](https://github.com/IanKarel15/Programacion-web/blob/main/practica1/index.html)
 
     * Actividad 2
 
