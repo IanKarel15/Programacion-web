@@ -31,7 +31,7 @@
 
 2. Parcial 2
 
-    * 🔗 [Ver código del index.html](https://github.com/IanKarel15/Programacion-web/blob/main/practica1/index.html)
+    * 🔗 [Ejercicio 1. Pagina web con elementos basicos](https://github.com/IanKarel15/Programacion-web/blob/main/practica1/index.html)
 
     * Actividad 2
 
