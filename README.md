@@ -23,17 +23,12 @@
 
 1. Parcial 1
 
-    * Actividad 1
-
-    * Actividad 2
-
-    * Actividad 3
 
 2. Parcial 2
 
     * 🔗 [Ejercicio 1. Pagina web con elementos basicos](practica1/index.html)
 
-    * Actividad 2
+    * 🔗 [Ejercicio 2. Pagina web con imagenes](practica2/index.html)
 
     * Actividad 3
 
