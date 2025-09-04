@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Munchie's Mix</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>
+    <header>
+        <h1>
         Bienvenidos a Munchie's Mix
-    </h1>
+        </h1>
 
-    <div>
-        <a href="#">Inicio</a>
-        <a href="#">Menú</a>
-        <a href="#">Ubicación</a>
-        <a href="#">Contáctanos</a>
-        <hr>
-    </div>
-
-    <div>
+        <nav class = "inicio">
+            <a href="#">Inicio</a>
+            <a href="#">Menú</a>
+            <a href="#">Ubicación</a>
+            <a href="#">Contáctanos</a>
+            <hr>
+        </nav>
+    </header>
+    
+    <main>
         <h2>
-            Sabores que conquistan
+            Bienvenidos a Munchies mix
         </h2>
-    </div>
+    </main>
 
     <div>
-        <h3>
+        <h3 class = "titulo">
             Nuestro compromiso
         </h3>
         <p>
@@ -47,6 +50,10 @@
         </q>
         <hr>
 
+        
+    </div>
+
+    <article>
         <small>
             *Promoción válida solo en este mes*
         </small>
@@ -57,8 +64,9 @@
         <br>
         <del>
             Antes $2800 MXN
-        </del> Ahora $2499 MXN
-    </div>
+            Ahora $2499 MXN
+        </del> 
+    </article>
 
     <div>
         <hr>
@@ -117,6 +125,57 @@
     </div>
 
     <div>
+        <form action="snacks.html" method="get">
+        <fieldset>
+            <legend>Ingresa tu informacion para una queja</legend>
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" type="text" name="nombre" placeholder="Ingresa tu nombre..." required>
+            <br>
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" type="email" name="email" placeholder="Ingresa tu correo..." required>
+            <br>
+            <label for="Numero">Numero de celular </label>
+            <input id="Numero" type="number" name="numero" placeholder="Ingresa tu numero..." required>
+            <br>
+            
+            <label for="motivo">Motivo</label>
+            <select id="motivo" name="motivo">
+                <optgroup label="Dudas">
+                    <option value="Dudas cotizacion">Dudas sobre cotizacion</option>
+                    <option value="Dudas sobre evento">Dudas sobre evento</option>
+                </optgroup>
+                <optgroup label="Errores en pagina">
+                    <option value="No carga la pagina">No carga la pagina</option>
+                    <option value="Es muy lenta la pagina">Es muy lenta la pagina</option>
+                </optgroup>
+                <optgroup label="Errores de pago">
+                    <option value="No se hizo el cobro">No se hizo el cobro</option>
+                    <option value="Se cobro dos veces">Se cobro dos veces</option>
+                </optgroup>
+            </select>
+            <br>
+
+            <label for=" Otro motivo">Otro motivo</label>
+            <br>
+            <textarea id="Motivo" cols="50" rows="10" name="Motivo" placeholder="Ingresa tus motivos..."></textarea>
+            <br>
+
+            <label for="contactar">¿Cómo deseas que te contactemos?</label>
+            <input id="contactar" list="metodos" name="contactar">
+
+            <datalist id="metodos">
+                <option value="Whatsapp">
+                <option value="Llamada">
+                <option value="Correo">
+            </datalist>
+
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
+
+    </div>
+
+    <div>
         <h3>Un poco de nosostros</h3>
         <video width="400" controls>
         <source src="imagenes/video-snack.mp4" type="video/mp4">
@@ -153,4 +212,9 @@
 
     </div>
 </body>
+
+<footer>
+  <p>&copy; 2025 Munchie’s Mix - Todos los derechos reservados</p>
+</footer>
+
 </html>
