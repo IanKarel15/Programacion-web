@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+}
+h1{
+    font-family: 'AnonymousPro', monospace; font-weight: bold;
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('../fonts/AnonymousPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+nav{
+    font-size: 30px;
+    font-family:'AnonymousPro', monospace; font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+.Logos img {
+    height: 35px;
+}
+
+.Logos {
+    padding-left: 1250px;
+}
+
+
+.navegador{
+    text-decoration: none;
+    color: white;
+    margin: 15px;
+
+}
+.imagen{
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    
+}
+p{
+    font-family:'AnonymousPro', monospace; font-weight: bold;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
