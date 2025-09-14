@@ -30,7 +30,7 @@
 
     * 🔗 [Ejercicio 2. Pagina web con css](practica2/index.html)
 
-    * Actividad 3
+    * 🔗 [Ejercicio 2. Pagina web con css](practica3/index.html)
 
 3. Parcial 3
 
