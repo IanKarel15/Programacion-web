@@ -28,7 +28,7 @@
 
     * 🔗 [Ejercicio 1. Pagina web con elementos basicos](practica1/index.html)
 
-    * 🔗 [Ejercicio 2. Pagina web con imagenes](practica2/index.html)
+    * 🔗 [Ejercicio 2. Pagina web con css](practica2/index.html)
 
     * Actividad 3
 

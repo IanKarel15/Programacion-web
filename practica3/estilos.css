@@ -1,0 +1,33 @@
+.tarjeta {
+  width: 300px;                  
+  border: 1px solid;        
+  border-radius: 10px;           
+  overflow: hidden;             
+}
+
+.tarjeta img{
+    width: 100%;  
+    height: auto;
+}
+
+.cuerpo-tarjeta{
+    padding: 15px;
+    text-align: center;
+    
+}
+.cuerpo-tarjeta h3{
+    margin: 0;
+    font-size: 18px;
+}
+.cuerpo-tarjeta p{
+    font-size: 14px;
+    color: #555;
+}
+.cuerpo-tarjeta button{
+
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
