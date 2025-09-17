@@ -34,7 +34,7 @@
 
 3. Parcial 3
 
-    * 🔗 [Pagina web con css](../Programacion-web/sitio%20web/index.html)
+    * 🔗 [Pagina web con css](sitio-web/index.html)
 
     * Actividad 2
 
