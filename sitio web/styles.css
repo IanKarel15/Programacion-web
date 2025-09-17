@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('fonts/AnonymousPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 200vh;
+    background:rgb(23, 23, 23);
+
+}
+
+header{
+    position:sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20%;
+    top: 0; 
+    width: 100%;
+    background-color: black;
+}
+header p{
+    
+    text-align: start;
+    font-size: 30px;
+    color: white;
+    margin-left: 20px;
+    
+    white-space: nowrap;
+
+}
+nav{
+ 
+    text-align: center;
+    flex-grow: 1;
+}
+.redes{
+
+    text-align: right;
+    margin-right: 15px;
+    
+}
+
+nav a {
+    color: white;
+    font-size: 25px;
+    padding: 5px 10px;
+    margin-left: 2%;
+    text-decoration: none;
+}
