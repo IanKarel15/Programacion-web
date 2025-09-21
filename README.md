@@ -36,7 +36,7 @@
 
     * 🔗 [Pagina web con css](sitio-web/index.html)
 
-    * Actividad 2
+    * 🔗 [Formulario con css](practica4/index.html)
 
     * Actividad 3
 
