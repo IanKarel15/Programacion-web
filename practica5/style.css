@@ -11,9 +11,24 @@
     font-style: normal;
 }
 body{
+    --color-bg: rgb(234, 232, 232);
+    --color-header-bg: black;
+    --color-header-text: white;
+    --color-accent: red;
+    --color-card-bg: black;
+    --color-card-text: white;
+    --font-main: 'AnonymousPro', monospace;
+
+    --header-height: 110px;
+    --card-min-width: 300px;
+    --card-max-width: 25%;
+
+    --gap-main: 30px;
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.4s ease;
     margin: 0;
     padding: 0;
-    background-color: rgb(234, 232, 232);
+    background-color:  var(--color-bg);
     height: 200vh;
 }
 * {
@@ -34,11 +49,11 @@ header{
     position: sticky;
     width: 100%;
     display: flex;
-    background-color: black;
-    color: white;
-    font-family: 'AnonymousPro', monospace; font-weight: bold;
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
+    font-family: var(--font-main);
     padding: 1%;
-    min-height: 110px;
+    min-height: var(--header-height);
     padding: 1rem;
     justify-content: space-between;
     top:0;
@@ -54,27 +69,27 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: var(--gap-main);
     margin: 0;         
     padding: 0; 
 }
 
 ul li {
     display: inline-block;
-    font-size: 28px;
+    font-size: clamp(20px, 2vw, 28px);
     font-weight: normal;
+    position: relative;
     
 }
 
 ul li:hover{
     text-decoration: underline;
-    text-decoration-color: red;
-    font-size: 32px;
-    font-weight: normal;
+    text-decoration-color: var(--color-accent);
+    font-weight: bold;
+    color: var(--color-accent);
 }
 a {
-    
-    color: white;
+    color: var(--color-header-text);
     padding: 0 6px;
     text-decoration: none;
 }
@@ -82,8 +97,8 @@ a {
 .menu-snacks {
     
     position: absolute;
-    left: 40%;           
-    top: 84%;
+    left: 0;
+    top: 100%;
     display: block;
     background: rgb(243, 243, 243);
     z-index: 50;
@@ -91,7 +106,7 @@ a {
     max-height: 0;
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: max-height 0.4s ease-out;
+    transition: max-height var(--transition-slow);
     overflow: hidden;
 }
 .menu-snacks a{
@@ -104,7 +119,7 @@ a {
 ul li:hover .menu-snacks{
     max-height: 700px;
     color: black;
-    transition: max-height 0.4s ease-in;
+    transition: max-height var(--transition-slow);
 }
 
 .contenedor-tarjetas{
@@ -118,40 +133,47 @@ ul li:hover .menu-snacks{
     flex-direction: column;
     align-items: center;
     padding: 2%;
-    max-width: 25%;
-    background-color: black;
+    max-width: var(--card-max-width);
+    background: var(--color-card-bg);
     min-width: 300px;
     margin: 10px;
-    color: white;
+    color: var(--color-card-text);
     box-shadow:0 4px 8px rgba(0,0,0,0.4) ;
     border-radius: 10px;
+    transition: var(--transition-fast);
 }
 
 .tarjeta:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.7);
     transition: 0.4s all;
+    transform: scale(1.02);
 }
 .texto-tarjeta{
     text-align: justify;
-    font-family:'AnonymousPro', monospace; font-weight: bold;
+    font-family: var(--font-main);
+    font-weight: bold;
 
 }
 
 .boton-tarjeta{
     height: 50px;
     width: 100%;
+    border-style: none;
     border-radius: 10px;
     font-size: 25px;
-    font-family:'AnonymousPro', monospace; font-weight: bold;
+    font-family: var(--font-main);
+    transition: all var(--transition-fast);
+    font-weight: bold;
 }
 .titulo-tarjeta{
-    font-family:'AnonymousPro', monospace; font-weight: bold;
+    font-family: var(--font-main);
+    font-weight: bold;
     font-size: 35px;
 }
 
 .boton-tarjeta:hover{
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
-    background-color: rgb(255, 0, 0);
+    background-color: var(--color-accent);
     color: white;
     transition: all 0.3s ease;
 }
