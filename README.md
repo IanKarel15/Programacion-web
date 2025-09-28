@@ -37,8 +37,8 @@
     * 🔗 [Pagina web con css](sitio-web/index.html)
 
     * 🔗 [Formulario con css](practica4/index.html)
-
-    * Actividad 3
+    
+    * 🔗 [Ejercicio 6. Menu con variables](practica5/index.html)
 
    
 

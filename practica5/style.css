@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('fonts/AnonymousPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url('fonts/AnonymousPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(234, 232, 232);
+    height: 200vh;
+}
+* {
+    box-sizing: border-box;
+}
+header h1 {
+    margin: 0;
+    padding-left: 10px;
+    font-weight: normal;    
+    align-self: center; 
+}
+header div {
+    display: flex;
+    align-items: flex-end; 
+    gap: 10px;
+}
+header{
+    position: sticky;
+    width: 100%;
+    display: flex;
+    background-color: black;
+    color: white;
+    font-family: 'AnonymousPro', monospace; font-weight: bold;
+    padding: 1%;
+    min-height: 110px;
+    padding: 1rem;
+    justify-content: space-between;
+    top:0;
+}
+
+nav {
+    display: flex;
+    
+}
+ul{
+    list-style: none;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin: 0;         
+    padding: 0; 
+}
+
+ul li {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: normal;
+    
+}
+
+ul li:hover{
+    text-decoration: underline;
+    text-decoration-color: red;
+    font-size: 32px;
+    font-weight: normal;
+}
+a {
+    
+    color: white;
+    padding: 0 6px;
+    text-decoration: none;
+}
+
+.menu-snacks {
+    
+    position: absolute;
+    left: 40%;           
+    top: 84%;
+    display: block;
+    background: rgb(243, 243, 243);
+    z-index: 50;
+    width: 250px;
+    max-height: 0;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: max-height 0.4s ease-out;
+    overflow: hidden;
+}
+.menu-snacks a{
+    color: black;
+    display: block;
+    padding: 8px;
+}
+
+
+ul li:hover .menu-snacks{
+    max-height: 700px;
+    color: black;
+    transition: max-height 0.4s ease-in;
+}
+
+.contenedor-tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    max-width: 25%;
+    background-color: black;
+    min-width: 300px;
+    margin: 10px;
+    color: white;
+    box-shadow:0 4px 8px rgba(0,0,0,0.4) ;
+    border-radius: 10px;
+}
+
+.tarjeta:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    transition: 0.4s all;
+}
+.texto-tarjeta{
+    text-align: justify;
+    font-family:'AnonymousPro', monospace; font-weight: bold;
+
+}
+
+.boton-tarjeta{
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family:'AnonymousPro', monospace; font-weight: bold;
+}
+.titulo-tarjeta{
+    font-family:'AnonymousPro', monospace; font-weight: bold;
+    font-size: 35px;
+}
+
+.boton-tarjeta:hover{
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+    background-color: rgb(255, 0, 0);
+    color: white;
+    transition: all 0.3s ease;
+}
