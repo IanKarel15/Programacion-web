@@ -98,7 +98,6 @@ a {
 .menu-snacks {
     
     position: absolute;
-    left: 0;
     top: 100%;
     display: block;
     background: rgb(243, 243, 243);
@@ -121,62 +120,6 @@ ul li:hover .menu-snacks{
     max-height: 700px;
     color: black;
     transition: max-height var(--transition-slow);
-}
-
-.contenedor-tarjetas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px;
-}
-.tarjeta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-    max-width: var(--card-max-width);
-    background: var(--color-card-bg);
-    min-width: 300px;
-    margin: 10px;
-    color: var(--color-card-text);
-    box-shadow:0 4px 8px rgba(0,0,0,0.4) ;
-    border-radius: 10px;
-    transition: var(--transition-fast);
-}
-
-.tarjeta:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
-    transition: 0.4s all;
-    transform: scale(1.02);
-}
-.texto-tarjeta{
-    text-align: justify;
-    font-family: var(--font-main);
-    font-weight: bold;
-
-}
-
-.boton-tarjeta{
-    height: 50px;
-    width: 100%;
-    border-style: none;
-    border-radius: 10px;
-    font-size: 25px;
-    font-family: var(--font-main);
-    transition: all var(--transition-fast);
-    font-weight: bold;
-}
-.titulo-tarjeta{
-    font-family: var(--font-main);
-    font-weight: bold;
-    font-size: 35px;
-}
-
-.boton-tarjeta:hover{
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
-    background-color: var(--color-accent);
-    color: white;
-    transition: all 0.3s ease;
 }
 
 .hero {
@@ -228,4 +171,136 @@ div button{
     font-weight: bold;
     display: block;
     margin: 30px auto;
+}
+
+.contenedor-widgets{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px; 
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.widgets{
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    font-family:  var(--font-main);
+    background-color: white;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: -80px;
+}
+
+.img-widget{
+    width: 25%;
+    padding-top: 5%;
+    padding-bottom: 0;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+.menu-desplegable {
+    display: none;
+}
+.menu-toggle{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .hamburger{
+        display: block;
+        position: absolute;
+        left: 5%;
+        top: 30%;
+        cursor: pointer;
+
+    }
+    
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        display: block;
+        font-size: 22px;
+        color: white;
+    } 
+
+  
+    .menu-toggle:checked ~ nav {
+        display: flex;
+    }
+
+    .nav-redes {
+        display: none;
+    }
+    .hero{
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .contenedor-widgets{
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .widgets{
+        width: 100%;
+        height: 30%;
+        
+        top: 20px;
+    }
+
+    div p {
+        font-size: clamp(14px, 4vw, 18px);
+        line-height: 1.4;
+    }
+    .contenedor-contenido{
+        display: none;
+    }
+
+    ul li:hover{
+        text-decoration: underline;
+        text-decoration-color: var(--color-accent);
+        font-weight: bold;
+        color: var(--color-accent);
+    }
+    .menu-snacks{
+        left: -90%;
+    }
+    
 }
