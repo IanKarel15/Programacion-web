@@ -40,6 +40,12 @@ header h1 {
     font-weight: normal;    
     align-self: center; 
 }
+.focus{
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    font-weight: bold;
+    
+}
 header div {
     display: flex;
     align-items: flex-end; 
@@ -122,6 +128,57 @@ ul li:hover .menu-snacks{
     transition: max-height var(--transition-slow);
 }
 
+.contenedor-opiniones{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+
+}
+
+.opinion {
+    background-color: #dedede;
+    padding: 20px 25px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(33% - 30px); 
+    vertical-align: top;
+}
+
+.opinion:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.opinion strong {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.opinion p:first-of-type {
+    font-size: 1.1rem;
+    color: #f5a623;
+    margin-bottom: 10px;
+}
+
+.opinion p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+
 .hero {
     position: relative;
     width: 100%;
@@ -155,6 +212,49 @@ div h3{
     padding: 0;
     font-size: 40px;
 
+}
+
+
+.card {
+    
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    
+}
+
+.card img {
+    width: 100%;
+    min-height: 250px;
+    padding: 10%;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-agregar {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    box-sizing: border-box;
+    width: 80%;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    
+}
+
+.btn-agregar:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    letter-spacing: 1px;
 }
 
 div button{
@@ -197,7 +297,7 @@ div button{
 
 .img-widget{
     width: 25%;
-    padding-top: 5%;
+    padding-top: 10%;
     padding-bottom: 0;
 }
 
@@ -224,6 +324,11 @@ div button{
         top: 30%;
         cursor: pointer;
 
+    }
+
+    .opinion {
+        width: 100%; 
+        margin: 15px 0;
     }
     
     header{
@@ -273,20 +378,30 @@ div button{
     .contenedor-widgets{
         display: flex;
         flex-wrap: wrap;
-        width: 60%;
-        padding: 20px;
-        margin: 0 auto;
+        width: 100%;
+        height: 20%;
     }
 
     .widgets{
+        align-items: center;
         width: 100%;
-        height: 30%;
-        
         top: 20px;
+        justify-content: space-around; 
+        display: flex;
+        flex-wrap:wrap;
+        text-align: center;
+
+    }
+    .img-widget{
+        min-width: 10%;
+        width: 15%;
+        padding: 0;
+        display: inline-block;
+
     }
 
     div p {
-        font-size: clamp(14px, 4vw, 18px);
+        font-size: clamp(24px, 4vw, 18px);
         line-height: 1.4;
     }
     .contenedor-contenido{
