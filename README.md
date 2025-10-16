@@ -42,7 +42,12 @@
     
     * 🔗 [Ejercicio 6. Menu con variables](practica5/index.html)
 
+4. Parcial 4
+
+    * 🔗 [Calculadora con JS](practicaJs/index.html)
+
    
+
 
 
 
