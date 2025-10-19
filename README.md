@@ -46,6 +46,8 @@
 
     * 🔗 [Calculadora con JS](practicaJs/index.html)
 
+    * 🔗 [Botones que cambian de color](practicaJs2/index.html)
+
    
 
 
