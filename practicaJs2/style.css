@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;   
+  align-items: center;        
+  background-color: white;    
+  transition: background-color 0.5s; 
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 40px;
+  color: #333;
+}
+
+div {
+  width: 70%;
+  display: flex;
+  justify-content: space-around; 
+  flex-wrap: wrap;               
+}
+
+input[type="button"] {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+input[type="button"]:hover {
+  transform: scale(1.1);
+  
+}
+
+.rojo{
+    background-color: red;
+}
+
+.rojo:hover{
+    background-color: #ff8989;
+}
+.verde{
+    background-color: green;
+}
+.verde:hover{
+    background-color: #8aff7b;
+}
+.azul{
+    background-color: blue;
+}
+.azul:hover{
+    background-color: #6f6aff;
+}
+.negro{
+    background-color: black;
+}
+.negro:hover{
+    background-color: #515151;
+}
+.regresar{
+  border: 2px solid black;
+  color: black;
+  background-color: rgb(130, 130, 130);
+}
+.regresar:hover {
+  background-color: #464646;
+}
