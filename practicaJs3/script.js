@@ -15,6 +15,37 @@ function concatenarOp(num1,num2,op,resul){
     operaciones.push(operacion);
     actualizarOperaciones();
 }
+
+
+
+document.addEventListener('keydown', function(e) {
+
+    if(isNaN(e.key)){
+        if (e.shiftKey && e.key === '*') {
+            e.preventDefault();
+            manejarOperador('*');
+            
+        }
+        if(e.key==='+' || e.key==='/' || e.key==='-' || e.key==='*'){
+            let op = e.key;
+            manejarOperador(op);
+        }
+        if(e.key==='=' || e.key ==='Enter'){
+            e.preventDefault();
+            calcular();
+            
+        }
+        if (e.key === 'Escape' || e.key === 'Backspace') {
+            numeroActual = numeroActual.slice(0, -1); 
+            actualizar();
+        }
+    }
+    else{
+        manejarNumero(e.key)
+    }
+    
+});
+
 function actualizar (){
     display.textContent = numeroActual || '0';
 }
@@ -41,6 +72,9 @@ function actualizarOperaciones (){
 }
 
 function calcular (){
+
+    if (!operador || numeroAnterior === '') return;
+
     let resultado = '';
     const num1 = parseFloat(numeroAnterior);
     const num2 = parseFloat(numeroActual);
@@ -53,19 +87,27 @@ function calcular (){
         default:
             break;
     }
-    concatenarOp(num1,num2,operador,resultado);
-    numeroActual = resultado.toString();
-    numeroAnterior = '';
-    operador = '';
-    actualizar();
-
-
+    if(resultado.toString()==='Error'){
+        numeroActual = resultado.toString();
+        actualizar();
+        numeroActual='';
+        return;
+    }
+    else{
+        concatenarOp(num1,num2,operador,resultado);
+        numeroActual = resultado.toString();
+        numeroAnterior = '';
+        operador = '';
+        actualizar();
+    }
+    
+    
 }
 
 function dividir (a, b){
     if(b===0){
-       return 'Error';
-       operador='';
+        operador='';
+        return 'Error';
     }
     return a/b;
 }
