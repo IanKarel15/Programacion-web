@@ -39,6 +39,8 @@ document.addEventListener('keydown', function(e) {
             numeroActual = numeroActual.slice(0, -1); 
             actualizar();
         }
+        if(e.key ==='.')
+            manejarNumero(e.key)
     }
     else{
         manejarNumero(e.key)
@@ -56,6 +58,7 @@ function eliminarOp(){
 }
 
 function manejarNumero(num){
+
     numeroActual += num; 
     actualizar();
 }
