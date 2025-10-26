@@ -89,9 +89,21 @@ function crearTareaDOM(tareaObj) {
     btnEliminar.textContent = 'Eliminar';
     btnEliminar.classList.add('btn-eliminar');
     btnEliminar.addEventListener('click', () => {
-        contenedor.removeChild(tareaDiv);
-        tareas = tareas.filter(t => t !== tareaObj);
-        localStorage.setItem('tareas', JSON.stringify(tareas));
+        Swal.fire({
+            title: 'Seguro que deseas eliminarla?',
+            showCancelButton: true,
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#000',
+            cancelButtonColor: '#d33',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                contenedor.removeChild(tareaDiv);
+                tareas = tareas.filter(t => t !== tareaObj);
+                localStorage.setItem('tareas', JSON.stringify(tareas));
+            }
+        });
     });
 
     tareaDiv.appendChild(checkbox);
