@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+.tachado {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.Header{
+    position: sticky;
+    background-color: black;
+    font-size: 1.5rem;
+    top: 0;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    color: white;
+    min-height: 100px;
+    justify-content: center;
+}
+.btn-tarea{
+    display: block;
+    margin: 0 auto;
+    border-style: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 150%;
+    padding: 15px;
+    transition: 0.2s;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-tarea:hover{
+    background-color: rgb(101, 101, 101);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.Contenedor-tareas {
+    margin-top: 20px;
+    padding: 20px;
+    max-height: 100vh;
+    transition: 0.2s;
+    overflow: auto;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.tarea {
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.tarea span {
+    display: block;
+    font-size: 2rem;
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.tarea button {
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    width: 20%;
+    overflow: hidden;
+    border-radius: 5px;
+    font-size: 160%;
+    padding: 15px;
+    transition: 0.2s;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-left: auto;
+}
+
+.tarea button:hover{
+    background-color: rgb(108, 108, 108);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.tarea:hover{
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.checkbox-tarea {
+    cursor: pointer;
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 2px solid #888;
+    margin-right: 10px;
+}
+
+.checkbox-tarea:checked {
+  background-color: rgb(0, 0, 0);
+}
