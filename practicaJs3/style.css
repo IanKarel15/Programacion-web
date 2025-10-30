@@ -55,6 +55,10 @@ h2{
     transition: 0.2s;
 
 }
+
+.tachado {
+  text-decoration: line-through;
+}
 .container-buttons button:hover{
     background-color: rgb(164, 223, 249);
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);

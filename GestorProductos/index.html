@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <span>Sistema de registro</span>
+    </header>
+    <h1>Ingresa la informacion del producto</h1>
+    <div class="div-registro">
+        
+        <input class="inputs" type="number" id="codigo" name="codigo" placeholder="Ingresa el código" min="0">
+        <input class="inputs" type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre">
+        <input class="inputs" type="number" id="precio" name="precio" placeholder="Ingresa el precio" min="0" step="0.01">
+
+        <input type="button" value="Añadir" id="btn-añadir">
+    </div>
+
+    <div class="container-table">
+        <table id="tablaProductos">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Fecha</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </div>
+    <div class="container-btn">
+        <button class="btn-eliminar" onclick="limpiarTabla()">Eliminar registros</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
